@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # --- 页面基础设置 ---
-st.set_page_config(page_title="临床风险预测模型 (LASSO筛选版)", layout="centered")
+st.set_page_config(page_title="临床风险预测模型", layout="centered")
 
 # --- 加载训练好的模型和相关信息 ---
 @st.cache_resource
@@ -26,8 +26,8 @@ if saved_data and isinstance(saved_data, dict):
     feature_names = saved_data.get('features')
 
 # --- 主页面 ---
-st.title('术中低氧血症风险预测工具 (LASSO筛选模型)')
-st.write("本工具基于LASSO回归筛选出的5个关键指标进行预测。")
+st.title('术中低氧血症风险预测工具')
+
 st.markdown("---")
 
 # --- 输入区域 ---
